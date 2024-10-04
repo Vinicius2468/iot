@@ -11,8 +11,11 @@ voçê pode girar o microservo para o lado que voçê quiser.
  - 1 Microservo
  - 2 Botões
  - 2 Resistores
-
+ - 1 arduino
+ - 1 placa de ensaio
+   
   # Código
+  
 
 biblioteca do servo motor
 #include <Servo.h>
