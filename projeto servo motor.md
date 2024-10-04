@@ -62,5 +62,7 @@ void loop()
     delay(1000);
      }
   }
+
+  ![Servomotorimagem](PROJETO_SERVO_MOTOR.png)
   
   
