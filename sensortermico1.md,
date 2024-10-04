@@ -1,0 +1,52 @@
+# Sensor Termico
+
+# Introdução
+
+- O projeto apesar de seu código ser um pouco complexo, a arquitetura e simples.
+- E uma tela LCD que marca a temperatura de um certo ponto especifico.
+
+# Material
+
+- 1 TPM
+- 1 arduino
+- placa de ensaio
+- tela lcd 16x2
+
+  # Código
+
+  IBLIOTECA LCD COM MODULO I2C
+#include <LiquidCrystal_I2C.h>
+
+  INICIALIZANDO LCD
+ LiquidCrystal_I2C telalcd (0X20,16,2); 
+
+VARIALVEL DO SENSOR DE TEMPERATURA 
+int sensorTMP = A0;
+capturar temperatura
+int valorlido = 0;
+void setup()
+{
+  definir o sensor como entrada
+  pinMode(sensorTMP,INPUT);
+  ligar a tela lcd
+  telalcd.init();
+  limpar os dados os que aparecem
+  telalcd.clear();
+  
+  aumentar a luminosidade
+  telalcd.backlight();
+}
+
+void loop()
+{
+capturar o valoe da temperatura
+  valorlido = analogRead(sensorTMP);
+  converter valor em tensao
+  float tensao = (valorlido*5.0)/1024.0;
+  converte a tensão em graus celcios
+  float temperatura = (tensao-0.5)*100.0;
+  imprimir o valor da temperature em lcd
+ telalcd.setCursor(0,0);
+  telalcd.print(temperatura);
+}
+![titulo da imagem](fotosensortermico.png)
