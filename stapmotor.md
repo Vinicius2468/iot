@@ -98,4 +98,7 @@ motor.run();
 // fazer o motor se movimentar a 360°/1024 passos
 motor.moveTo(Voltas);
 }
+
+
+
 ![imagem boa](motor-de-passo-arduino-img4.png)
